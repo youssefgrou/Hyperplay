@@ -46,7 +46,7 @@ export default function LandingPage({ onSelectGame }) {
             <div className="hub-logo-icon">
               <Sparkles size={22} color="#ffffff" />
             </div>
-            <span className="hub-logo-text">HYPER<span className="gradient-text" style={{fontWeight: 800}}>PLAY</span></span>
+            <span className="hub-logo-text">HYPER<span className="gradient-text" style={{ fontWeight: 800 }}>PLAY</span></span>
           </div>
           <div className="hub-header-stats">
             <div className="score-badge" style={{ borderColor: 'rgba(99, 102, 241, 0.3)' }}>
@@ -64,14 +64,14 @@ export default function LandingPage({ onSelectGame }) {
             <Sparkles size={14} style={{ color: '#a855f7' }} />
             <span>EXCITING NEW GAME MODE RELEASED</span>
           </div>
-          
+
           <h1 className="hero-title">
             Level Up Your Brain in the <br />
             <span className="gradient-text">Ultimate Mind Arena</span>
           </h1>
-          
+
           <p className="hero-subtitle">
-            Challenge yourself with two immersive game modes. Translate languages at hyper-speed 
+            Challenge yourself with two immersive game modes. Translate languages at hyper-speed
             or outsmart tricky trivia questions. Beautiful, fast, and free to play!
           </p>
 
@@ -96,8 +96,8 @@ export default function LandingPage({ onSelectGame }) {
 
           <div className="game-cards-grid">
             {/* Game Card 1: Translate Game */}
-            <div 
-              className="glass-panel game-card" 
+            <div
+              className="glass-panel game-card"
               onClick={() => onSelectGame('translate')}
             >
               <div className="card-glow" style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%)' }}></div>
@@ -111,7 +111,7 @@ export default function LandingPage({ onSelectGame }) {
               </div>
               <h3 className="card-title">Translate Master</h3>
               <p className="card-desc">
-                Translate words and phrases across languages in a fast-paced vocabulary test. 
+                Translate words and phrases across languages in a fast-paced vocabulary test.
                 Perfect for language learners and word experts!
               </p>
               <div className="card-features-list">
@@ -134,8 +134,8 @@ export default function LandingPage({ onSelectGame }) {
             </div>
 
             {/* Game Card 2: Trivia Game */}
-            <div 
-              className="glass-panel game-card" 
+            <div
+              className="glass-panel game-card"
               onClick={() => onSelectGame('trivia')}
             >
               <div className="card-glow" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.15) 0%, transparent 70%)' }}></div>
@@ -149,7 +149,7 @@ export default function LandingPage({ onSelectGame }) {
               </div>
               <h3 className="card-title">Mind Match (Choosing)</h3>
               <p className="card-desc">
-                Put your knowledge to the test in a multiple-choice question challenge. Answer quickly 
+                Put your knowledge to the test in a multiple-choice question challenge. Answer quickly
                 to maintain your streak and score maximum points!
               </p>
               <div className="card-features-list">
@@ -179,7 +179,7 @@ export default function LandingPage({ onSelectGame }) {
         <div className="container">
           <div className="glass-panel teaser-box">
             <div className="teaser-grid">
-              
+
               <div className="teaser-left">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                   <Sparkles size={16} color="#ec4899" />
@@ -191,14 +191,14 @@ export default function LandingPage({ onSelectGame }) {
                 </p>
 
                 <div className="toggle-buttons">
-                  <button 
-                    onClick={() => { setTeaserType('translate'); resetTeaser(); }} 
+                  <button
+                    onClick={() => { setTeaserType('translate'); resetTeaser(); }}
                     className={`toggle-btn ${teaserType === 'translate' ? 'toggle-btn-active' : ''}`}
                   >
                     <Languages size={16} /> Translate Teaser
                   </button>
-                  <button 
-                    onClick={() => { setTeaserType('trivia'); resetTeaser(); }} 
+                  <button
+                    onClick={() => { setTeaserType('trivia'); resetTeaser(); }}
                     className={`toggle-btn ${teaserType === 'trivia' ? 'toggle-btn-active' : ''}`}
                   >
                     <HelpCircle size={16} /> Trivia Teaser
@@ -214,13 +214,13 @@ export default function LandingPage({ onSelectGame }) {
                     <div className="mockup-dot"></div>
                     <span className="mockup-title">Interactive Preview</span>
                   </div>
-                  
+
                   <div className="mockup-body">
                     {teaserType === 'translate' ? (
                       <div>
                         <div className="question-bubble">
                           <span className="question-label">SPANISH</span>
-                          <h4 className="question-word">¿Cómo se dice <span className="gradient-text" style={{fontWeight: 800}}>"El world"</span> en inglés?</h4>
+                          <h4 className="question-word">¿Cómo se dice <span className="gradient-text" style={{ fontWeight: 800 }}>"El world"</span> en inglés?</h4>
                         </div>
                         <div className="options-list">
                           {[
@@ -233,7 +233,7 @@ export default function LandingPage({ onSelectGame }) {
                               itemClass += opt.isCorrect ? " option-item-correct" : " option-item-incorrect";
                             }
                             return (
-                              <button 
+                              <button
                                 key={i}
                                 onClick={() => handleTeaserAnswer(opt.text, opt.isCorrect)}
                                 className={itemClass}
@@ -252,7 +252,7 @@ export default function LandingPage({ onSelectGame }) {
                       <div>
                         <div className="question-bubble">
                           <span className="question-label">GEOGRAPHY TRIVIA</span>
-                          <h4 className="question-word">Which city is known as the <span className="gradient-text" style={{fontWeight: 800}}>"City of Light"</span>?</h4>
+                          <h4 className="question-word">Which city is known as the <span className="gradient-text" style={{ fontWeight: 800 }}>"City of Light"</span>?</h4>
                         </div>
                         <div className="options-list">
                           {[
@@ -265,7 +265,7 @@ export default function LandingPage({ onSelectGame }) {
                               itemClass += opt.isCorrect ? " option-item-correct" : " option-item-incorrect";
                             }
                             return (
-                              <button 
+                              <button
                                 key={i}
                                 onClick={() => handleTeaserAnswer(opt.text, opt.isCorrect)}
                                 className={itemClass}
@@ -326,6 +326,14 @@ export default function LandingPage({ onSelectGame }) {
           </div>
         </div>
       </section>
+
+
+      <div style={{ textAlign: "center", marginTop: "10px", backgroundColor: "transparent", border: "none", color: "#cbd5e1" }} className="">
+        <p>Développé par Youssef Grou </p>
+      </div>
     </div>
+
+
+
   );
 }
