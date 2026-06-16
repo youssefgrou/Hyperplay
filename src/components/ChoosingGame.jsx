@@ -34,7 +34,7 @@ const TRIVIA_QUESTIONS = {
     { question: 'Which navigator is credited with discovering the Americas in 1492?', options: ['Amerigo Vespucci', 'Christopher Columbus', 'Ferdinand Magellan', 'Vasco da Gama'], answer: 'Christopher Columbus' },
     { question: 'Which war was fought between the US North and South?', options: ['Revolutionary War', 'Civil War', 'War of 1812', 'World War I'], answer: 'Civil War' }
   ],
-  girlfriend: [
+  romantic: [
     { question: 'ما أول شيء لفت انتباهكِ فيّ؟' },
     { question: 'متى شعرتِ أنكِ أحببتِني فعلًا؟' },
     { question: 'ما أكثر موقف جعلَكِ تضحكين معي؟' },
@@ -309,7 +309,7 @@ export default function ChoosingGame({ onBack }) {
 
   // --- GIRLFRIEND SPECIAL MODE ---
   const startGfGame = (subcat) => {
-    const list = [...GIRLFRIEND_QUESTIONS[subcat]]; 
+    const list = [...TRIVIA_QUESTIONS[subcat]]; 
     setQuestions(list);
     setGfSubcategory(subcat);
     setCurrentIdx(0);
